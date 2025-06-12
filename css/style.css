@@ -1,40 +1,62 @@
-/*Fonte base do Google Fonts*/
-body {
+/* Fonte base e estrutura */
+html, body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   font-size: 16px;
   background-color: #ffffff;
   color: #333;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100%;
 }
 
-/*Dark Theme*/
+/* Layout base com flex */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+/* Container opcional para centralizar */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Tema escuro */
 body.dark-theme {
   background-color: #121212;
   color: #f1f1f1;
 }
 
-/*Acessibilidade - fonte aumentada*/
+body.dark-theme .cartilha-section {
+  background-color: #1e1e1e;
+}
+
+/* Acessibilidade: fonte maior */
 body.large-font {
   font-size: 20px;
 }
 
-/*Header*/
+/* Cabeçalho */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
   background-color: #0077cc;
   color: #fff;
 }
 
-header h1 {
-  margin: 0;
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
 }
 
-nav ul {
+.nav-left {
   list-style: none;
   display: flex;
   gap: 1rem;
@@ -42,14 +64,19 @@ nav ul {
   padding: 0;
 }
 
-nav a {
+.nav-left a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
+.nav-left a:hover {
   text-decoration: underline;
+}
+
+.top-buttons {
+  display: flex;
+  align-items: center;
 }
 
 .top-buttons button {
@@ -62,21 +89,87 @@ nav a:hover {
   color: white;
 }
 
-/*Main*/
-main {
-  padding: 2rem;
-}
-
-.intro {
-  max-width: 800px;
-  margin: auto;
+/* Título do site */
+.site-title {
   text-align: center;
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 1.8rem;
+  background-color: #0077cc;
 }
 
-/*Footer*/
+/* Seções da cartilha */
+.cartilha-section {
+  background-color: #f3f3f3;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin: 0 auto 2rem;
+  max-width: 900px;
+}
+
+.cartilha-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0;
+}
+
+/* Botões de navegação */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+
+.next-button {
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.next-button:hover {
+  background-color: #005fa3;
+}
+
+/* Rodapé */
 footer {
   text-align: center;
   padding: 1rem;
   background-color: #0077cc;
   color: white;
+  margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-left {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .top-buttons {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .next-button {
+    text-align: center;
+  }
 }
