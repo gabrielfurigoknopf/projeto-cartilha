@@ -1,4 +1,4 @@
-/* Fonte base e estrutura */
+/*fonte base e estrutura*/
 html, body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -10,25 +10,26 @@ html, body {
   min-height: 100%;
 }
 
-/* Layout base com flex */
+/*layout base com flex*/
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/*conteúdo principal*/
 main {
   flex: 1;
   padding: 2rem 1rem;
 }
 
-/* Container opcional para centralizar */
+/*container para centralizar*/
 .container {
   max-width: 960px;
   margin: 0 auto;
 }
 
-/* Tema escuro */
+/*tema escuro*/
 body.dark-theme {
   background-color: #121212;
   color: #f1f1f1;
@@ -38,12 +39,12 @@ body.dark-theme .cartilha-section {
   background-color: #1e1e1e;
 }
 
-/* Acessibilidade: fonte maior */
+/*acessibilidade: fonte maior*/
 body.large-font {
   font-size: 20px;
 }
 
-/* Cabeçalho */
+/*cabeçalho*/
 header {
   background-color: #0077cc;
   color: #fff;
@@ -89,7 +90,7 @@ header {
   color: white;
 }
 
-/* Título do site */
+/*título do site*/
 .site-title {
   text-align: center;
   margin: 0;
@@ -98,7 +99,7 @@ header {
   background-color: #0077cc;
 }
 
-/* Animação de entrada suave */
+/*animação de entrada*/
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -110,7 +111,7 @@ header {
   }
 }
 
-/* Seções da cartilha */
+/*seções da cartilha*/
 .cartilha-section {
   background-color: #f3f3f3;
   padding: 1rem 1.5rem;
@@ -127,7 +128,7 @@ header {
   margin-top: 0;
 }
 
-/* Botões de navegação */
+/*botões de navegação*/
 .nav-buttons {
   display: flex;
   justify-content: space-between;
@@ -149,7 +150,7 @@ header {
   background-color: #005fa3;
 }
 
-/* Rodapé */
+/*rodapé*/
 footer {
   text-align: center;
   padding: 1rem;
@@ -158,7 +159,7 @@ footer {
   margin-top: auto;
 }
 
-/* Responsividade */
+/*responsividade*/
 @media (max-width: 600px) {
   .top-bar {
     flex-direction: column;
