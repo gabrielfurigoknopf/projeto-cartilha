@@ -1,0 +1,207 @@
+/* Fonte base e estrutura */
+html, body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s; /* transição temas */
+  min-height: 100%; /* ocupar toda a tela */
+}
+
+/* Layout base com flex */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ocupar todo o espaço do body */
+}
+
+/* Tema escuro */
+body.dark-theme {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-theme .cartilha-section {
+  background-color: #1e1e1e;
+}
+
+body.dark-theme section { /* ajustando as seções do main no dark theme */
+  background-color: #4d4c4c;
+  color: rgb(218, 215, 215);
+  box-shadow: 2px 4px 8px 5px rgba(206, 201, 201, 0.2);
+}
+
+body.dark-theme a { /* ajustando os links das redes sociais no dark theme */
+  color: rgb(218, 215, 215);
+}
+
+/* Acessibilidade: fonte maior */
+body.large-font {
+  font-size: 20px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+.top-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+.nav-left {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  justify-self: start;
+}
+
+.nav-left a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-left a:hover {
+  text-decoration: underline;
+}
+
+.top-buttons {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+}
+
+.top-buttons button {
+  margin-left: 10px;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #005fa3;
+  color: white;
+}
+
+/* Título do site */
+
+.site-title {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.site-title-container {
+  justify-self: center;
+}
+
+/* Conteúdo Principal */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  gap: 10rem;
+}
+
+section {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 2px 4px 8px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+img {
+  max-height: 225px;
+  max-width: 225px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  font-size: 25px;
+  }
+
+.social-media a {
+  color: black;
+  }
+
+.social-media a:hover {
+  transform: scale(1.3);
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0077cc;
+  color: white;
+  margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .top-bar {
+    grid-template-columns: 1fr; /* coluna única ao invés das 3 anteriores */
+    grid-template-areas: /* nomeando cada uma para especificar a ordem, criando uma row pra cada, na vertical */
+      "nav"
+      "title"
+      "buttons";
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-left {
+    grid-area: nav;
+    justify-self: center;
+  }
+
+  .site-title-container {
+    grid-area: title;
+    text-align: center;
+  }
+
+  .top-buttons {
+    grid-area: buttons;
+    justify-self: center;
+  }
+
+  main {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+      "bruno"
+      "gabriel"
+      "lucca";
+  padding: 2rem;
+  gap: 5rem;
+  margin: auto;
+  }
+
+  .bruno {
+    grid-area: bruno;
+  }
+
+  .gabriel {
+    grid-area: gabriel;
+  }
+
+  .lucca {
+    grid-area: lucca;
+  }
+  
+}
