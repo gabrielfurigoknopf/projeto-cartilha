@@ -34,13 +34,13 @@ Os alunos da disciplina **CCC277 – Web Lab** desenvolveram um website baseado 
 
 ## Requisitos Atendidos
 
-- [x] Entrega via Moodle e apresentação em aula (26 de junho)
-- [x] Página "Sobre" com informações e fotos dos integrantes
-- [x] Mínimo de 3 páginas HTML
-- [x] Formulário de contato funcional (com alerta)
-- [x] Design com acessibilidade e responsividade
-- [x] Uso de Material Icons e Google Fonts
-- [x] Estrutura de pastas organizada (`css/`, `js/`, `img/`)
+- [✅] Entrega via Moodle e apresentação em aula (26 de junho)
+- [✅] Página "Sobre" com informações e fotos dos integrantes
+- [✅] Mínimo de 3 páginas HTML
+- [✅] Formulário de contato funcional (com alerta)
+- [✅] Design com acessibilidade e responsividade
+- [✅] Uso de Material Icons e Google Fonts
+- [✅] Estrutura de pastas organizada (`css/`, `js/`, `img/`)
 
 ---
 
